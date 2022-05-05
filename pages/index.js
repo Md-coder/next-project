@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import LinkList from '../components/linkList';
+import CreateLink from '../components/CreateLink';
 
 const httpLink = createHttpLink({
   uri: 'http://graphql.kingnonso.com/',
@@ -23,7 +24,7 @@ export default function Home() {
           <link rel='icon' href='/favicon.ico' />
         </Head>
 
-        <LinkList />
+        <CreateLink />
       </ApolloProvider>
 
       <link rel='stylesheet' href='https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css' />
